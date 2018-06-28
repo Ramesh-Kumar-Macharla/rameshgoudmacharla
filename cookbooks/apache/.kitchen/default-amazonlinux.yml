@@ -1,0 +1,4 @@
+---
+username: kitchen
+ssh_key: "/home/ec2-user/chef-repo/cookbooks/apache/.kitchen/docker_id_rsa"
+last_error: Kitchen::ActionFailed

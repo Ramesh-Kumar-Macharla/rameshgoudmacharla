@@ -1,0 +1,10 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost6 localhost6.localdomain6
+127.0.0.1   localhost 
+#52.205.250.82	chef1.cheftraining.com
+#52.205.250.82	chef2.cheftraining.com
+#52.205.250.82 	ramesh.goud.com
+
+34.217.210.187 chef1.cheftraining.com
+34.217.210.187 chef2.cheftraining.com
+34.217.210.187 chef3.cheftraining.com

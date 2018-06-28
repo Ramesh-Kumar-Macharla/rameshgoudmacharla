@@ -1,0 +1,372 @@
+I, [2018-06-28T09:40:36.867990 #14181]  INFO -- default-centos-7: -----> Creating <default-centos-7>...
+I, [2018-06-28T09:40:37.197172 #14181]  INFO -- default-centos-7: Sending build context to Docker daemon  142.8kB
+I, [2018-06-28T09:40:37.281365 #14181]  INFO -- default-centos-7: Step 1/16 : FROM centos:centos7
+I, [2018-06-28T09:40:37.517815 #14181]  INFO -- default-centos-7: centos7: Pulling from library/centos
+I, [2018-06-28T09:40:37.594773 #14181]  INFO -- default-centos-7: 7dc0dca2b151: Pulling fs layer
+I, [2018-06-28T09:40:39.397298 #14181]  INFO -- default-centos-7: 7dc0dca2b151: Verifying Checksum
+I, [2018-06-28T09:40:39.397697 #14181]  INFO -- default-centos-7: 7dc0dca2b151: Download complete
+I, [2018-06-28T09:40:45.086214 #14181]  INFO -- default-centos-7: 7dc0dca2b151: Pull complete
+I, [2018-06-28T09:40:45.086645 #14181]  INFO -- default-centos-7: Digest: sha256:b67d21dfe609ddacf404589e04631d90a342921e81c40aeaf3391f6717fa5322
+I, [2018-06-28T09:40:45.086685 #14181]  INFO -- default-centos-7: Status: Downloaded newer image for centos:centos7
+I, [2018-06-28T09:40:45.087294 #14181]  INFO -- default-centos-7:  ---> 49f7960eb7e4
+I, [2018-06-28T09:40:45.087677 #14181]  INFO -- default-centos-7: Step 2/16 : ENV container docker
+I, [2018-06-28T09:40:45.104683 #14181]  INFO -- default-centos-7:  ---> Running in ebbee10a25be
+I, [2018-06-28T09:40:45.191740 #14181]  INFO -- default-centos-7: Removing intermediate container ebbee10a25be
+I, [2018-06-28T09:40:45.192125 #14181]  INFO -- default-centos-7:  ---> 6371955f49dc
+I, [2018-06-28T09:40:45.192511 #14181]  INFO -- default-centos-7: Step 3/16 : RUN yum clean all
+I, [2018-06-28T09:40:45.209634 #14181]  INFO -- default-centos-7:  ---> Running in 3c4bf98a5bab
+I, [2018-06-28T09:40:45.728307 #14181]  INFO -- default-centos-7: Loaded plugins: fastestmirror, ovl
+I, [2018-06-28T09:40:45.851972 #14181]  INFO -- default-centos-7: Cleaning repos: base extras updates
+I, [2018-06-28T09:40:45.852557 #14181]  INFO -- default-centos-7: Cleaning up everything
+I, [2018-06-28T09:40:45.853020 #14181]  INFO -- default-centos-7: Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+I, [2018-06-28T09:40:46.365545 #14181]  INFO -- default-centos-7: Removing intermediate container 3c4bf98a5bab
+I, [2018-06-28T09:40:46.365957 #14181]  INFO -- default-centos-7:  ---> addf2ec49d0a
+I, [2018-06-28T09:40:46.366325 #14181]  INFO -- default-centos-7: Step 4/16 : RUN yum install -y sudo openssh-server openssh-clients which curl
+I, [2018-06-28T09:40:46.383058 #14181]  INFO -- default-centos-7:  ---> Running in f43922d1bccd
+I, [2018-06-28T09:40:46.814071 #14181]  INFO -- default-centos-7: Loaded plugins: fastestmirror, ovl
+I, [2018-06-28T09:40:46.934573 #14181]  INFO -- default-centos-7: Determining fastest mirrors
+I, [2018-06-28T09:40:47.547232 #14181]  INFO -- default-centos-7:  * base: mirror.steadfast.net
+I, [2018-06-28T09:40:47.548165 #14181]  INFO -- default-centos-7:  * extras: mirror.ash.fastserv.com
+I, [2018-06-28T09:40:47.548828 #14181]  INFO -- default-centos-7:  * updates: mirror.steadfast.net
+I, [2018-06-28T09:40:49.845786 #14181]  INFO -- default-centos-7: Package curl-7.29.0-46.el7.x86_64 already installed and latest version
+I, [2018-06-28T09:40:49.846444 #14181]  INFO -- default-centos-7: Resolving Dependencies
+I, [2018-06-28T09:40:49.847462 #14181]  INFO -- default-centos-7: --> Running transaction check
+I, [2018-06-28T09:40:49.847946 #14181]  INFO -- default-centos-7: ---> Package openssh-clients.x86_64 0:7.4p1-16.el7 will be installed
+I, [2018-06-28T09:40:49.870626 #14181]  INFO -- default-centos-7: --> Processing Dependency: openssh = 7.4p1-16.el7 for package: openssh-clients-7.4p1-16.el7.x86_64
+I, [2018-06-28T09:40:49.981597 #14181]  INFO -- default-centos-7: --> Processing Dependency: fipscheck-lib(x86-64) >= 1.3.0 for package: openssh-clients-7.4p1-16.el7.x86_64
+I, [2018-06-28T09:40:49.984426 #14181]  INFO -- default-centos-7: --> Processing Dependency: libfipscheck.so.1()(64bit) for package: openssh-clients-7.4p1-16.el7.x86_64
+I, [2018-06-28T09:40:49.984922 #14181]  INFO -- default-centos-7: --> Processing Dependency: libedit.so.0()(64bit) for package: openssh-clients-7.4p1-16.el7.x86_64
+I, [2018-06-28T09:40:49.987026 #14181]  INFO -- default-centos-7: ---> Package openssh-server.x86_64 0:7.4p1-16.el7 will be installed
+I, [2018-06-28T09:40:49.994838 #14181]  INFO -- default-centos-7: --> Processing Dependency: libwrap.so.0()(64bit) for package: openssh-server-7.4p1-16.el7.x86_64
+I, [2018-06-28T09:40:49.997062 #14181]  INFO -- default-centos-7: ---> Package sudo.x86_64 0:1.8.19p2-13.el7 will be installed
+I, [2018-06-28T09:40:49.999778 #14181]  INFO -- default-centos-7: ---> Package which.x86_64 0:2.20-7.el7 will be installed
+I, [2018-06-28T09:40:50.000904 #14181]  INFO -- default-centos-7: --> Running transaction check
+I, [2018-06-28T09:40:50.001348 #14181]  INFO -- default-centos-7: ---> Package fipscheck-lib.x86_64 0:1.4.1-6.el7 will be installed
+I, [2018-06-28T09:40:50.003919 #14181]  INFO -- default-centos-7: --> Processing Dependency: /usr/bin/fipscheck for package: fipscheck-lib-1.4.1-6.el7.x86_64
+I, [2018-06-28T09:40:50.005672 #14181]  INFO -- default-centos-7: ---> Package libedit.x86_64 0:3.0-12.20121213cvs.el7 will be installed
+I, [2018-06-28T09:40:50.006273 #14181]  INFO -- default-centos-7: ---> Package openssh.x86_64 0:7.4p1-16.el7 will be installed
+I, [2018-06-28T09:40:50.009664 #14181]  INFO -- default-centos-7: ---> Package tcp_wrappers-libs.x86_64 0:7.6-77.el7 will be installed
+I, [2018-06-28T09:40:50.010769 #14181]  INFO -- default-centos-7: --> Running transaction check
+I, [2018-06-28T09:40:50.011205 #14181]  INFO -- default-centos-7: ---> Package fipscheck.x86_64 0:1.4.1-6.el7 will be installed
+I, [2018-06-28T09:40:50.095234 #14181]  INFO -- default-centos-7: --> Finished Dependency Resolution
+I, [2018-06-28T09:40:50.100444 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:40:50.100504 #14181]  INFO -- default-centos-7: Dependencies Resolved
+I, [2018-06-28T09:40:50.103154 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:40:50.103199 #14181]  INFO -- default-centos-7: ================================================================================
+I, [2018-06-28T09:40:50.103229 #14181]  INFO -- default-centos-7:  Package                Arch        Version                     Repository
+I, [2018-06-28T09:40:50.103280 #14181]  INFO -- default-centos-7:                                                                     Size
+I, [2018-06-28T09:40:50.103309 #14181]  INFO -- default-centos-7: ================================================================================
+I, [2018-06-28T09:40:50.103335 #14181]  INFO -- default-centos-7: Installing:
+I, [2018-06-28T09:40:50.103357 #14181]  INFO -- default-centos-7:  openssh-clients        x86_64      7.4p1-16.el7                base      655 k
+I, [2018-06-28T09:40:50.103376 #14181]  INFO -- default-centos-7:  openssh-server         x86_64      7.4p1-16.el7                base      458 k
+I, [2018-06-28T09:40:50.103394 #14181]  INFO -- default-centos-7:  sudo                   x86_64      1.8.19p2-13.el7             base      1.1 M
+I, [2018-06-28T09:40:50.103413 #14181]  INFO -- default-centos-7:  which                  x86_64      2.20-7.el7                  base       41 k
+I, [2018-06-28T09:40:50.103439 #14181]  INFO -- default-centos-7: Installing for dependencies:
+I, [2018-06-28T09:40:50.103459 #14181]  INFO -- default-centos-7:  fipscheck              x86_64      1.4.1-6.el7                 base       21 k
+I, [2018-06-28T09:40:50.103477 #14181]  INFO -- default-centos-7:  fipscheck-lib          x86_64      1.4.1-6.el7                 base       11 k
+I, [2018-06-28T09:40:50.103527 #14181]  INFO -- default-centos-7:  libedit                x86_64      3.0-12.20121213cvs.el7      base       92 k
+I, [2018-06-28T09:40:50.103553 #14181]  INFO -- default-centos-7:  openssh                x86_64      7.4p1-16.el7                base      510 k
+I, [2018-06-28T09:40:50.103574 #14181]  INFO -- default-centos-7:  tcp_wrappers-libs      x86_64      7.6-77.el7                  base       66 k
+I, [2018-06-28T09:40:50.103605 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:40:50.103624 #14181]  INFO -- default-centos-7: Transaction Summary
+I, [2018-06-28T09:40:50.103643 #14181]  INFO -- default-centos-7: ================================================================================
+I, [2018-06-28T09:40:50.103665 #14181]  INFO -- default-centos-7: Install  4 Packages (+5 Dependent packages)
+I, [2018-06-28T09:40:50.103684 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:40:50.104714 #14181]  INFO -- default-centos-7: Total download size: 2.9 M
+I, [2018-06-28T09:40:50.105146 #14181]  INFO -- default-centos-7: Installed size: 9.7 M
+I, [2018-06-28T09:40:50.105538 #14181]  INFO -- default-centos-7: Downloading packages:
+I, [2018-06-28T09:40:50.330651 #14181]  INFO -- default-centos-7: [91mwarning: [0m[91m/var/cache/yum/x86_64/7/base/packages/fipscheck-lib-1.4.1-6.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+I, [2018-06-28T09:40:50.331393 #14181]  INFO -- default-centos-7: [0mPublic key for fipscheck-lib-1.4.1-6.el7.x86_64.rpm is not installed
+I, [2018-06-28T09:40:50.476503 #14181]  INFO -- default-centos-7: --------------------------------------------------------------------------------
+I, [2018-06-28T09:40:50.477204 #14181]  INFO -- default-centos-7: Total                                              7.8 MB/s | 2.9 MB  00:00     
+I, [2018-06-28T09:40:50.478348 #14181]  INFO -- default-centos-7: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+I, [2018-06-28T09:40:50.483948 #14181]  INFO -- default-centos-7: [91mImporting GPG key 0xF4A80EB5:
+I, [2018-06-28T09:40:50.484180 #14181]  INFO -- default-centos-7:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+I, [2018-06-28T09:40:50.484214 #14181]  INFO -- default-centos-7:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+I, [2018-06-28T09:40:50.484235 #14181]  INFO -- default-centos-7:  Package    : centos-release-7-5.1804.el7.centos.2.x86_64 (@Updates)
+I, [2018-06-28T09:40:50.484253 #14181]  INFO -- default-centos-7:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+I, [2018-06-28T09:40:50.502500 #14181]  INFO -- default-centos-7: [0mRunning transaction check
+I, [2018-06-28T09:40:50.524772 #14181]  INFO -- default-centos-7: Running transaction test
+I, [2018-06-28T09:40:50.539399 #14181]  INFO -- default-centos-7: Transaction test succeeded
+I, [2018-06-28T09:40:50.540173 #14181]  INFO -- default-centos-7: Running transaction
+I, [2018-06-28T09:40:50.594511 #14181]  INFO -- default-centos-7:   Installing : fipscheck-1.4.1-6.el7.x86_64                                 1/9 
+I, [2018-06-28T09:40:50.778604 #14181]  INFO -- default-centos-7:   Installing : fipscheck-lib-1.4.1-6.el7.x86_64                             2/9 
+I, [2018-06-28T09:40:50.812313 #14181]  INFO -- default-centos-7:   Installing : openssh-7.4p1-16.el7.x86_64                                  3/9 
+I, [2018-06-28T09:40:50.840080 #14181]  INFO -- default-centos-7:   Installing : libedit-3.0-12.20121213cvs.el7.x86_64                        4/9 
+I, [2018-06-28T09:40:50.947900 #14181]  INFO -- default-centos-7:   Installing : tcp_wrappers-libs-7.6-77.el7.x86_64                          5/9 
+I, [2018-06-28T09:40:51.072625 #14181]  INFO -- default-centos-7:   Installing : openssh-server-7.4p1-16.el7.x86_64                           6/9 
+I, [2018-06-28T09:40:51.093748 #14181]  INFO -- default-centos-7:   Installing : openssh-clients-7.4p1-16.el7.x86_64                          7/9 
+I, [2018-06-28T09:40:51.108100 #14181]  INFO -- default-centos-7:   Installing : which-2.20-7.el7.x86_64                                      8/9 
+I, [2018-06-28T09:40:51.108192 #14181]  INFO -- default-centos-7: install-info: No such file or directory for /usr/share/info/which.info.gz
+I, [2018-06-28T09:40:51.272115 #14181]  INFO -- default-centos-7:   Installing : sudo-1.8.19p2-13.el7.x86_64                                  9/9 
+I, [2018-06-28T09:40:51.286724 #14181]  INFO -- default-centos-7:   Verifying  : fipscheck-lib-1.4.1-6.el7.x86_64                             1/9 
+I, [2018-06-28T09:40:51.301167 #14181]  INFO -- default-centos-7:   Verifying  : sudo-1.8.19p2-13.el7.x86_64                                  2/9 
+I, [2018-06-28T09:40:51.311314 #14181]  INFO -- default-centos-7:   Verifying  : openssh-7.4p1-16.el7.x86_64                                  3/9 
+I, [2018-06-28T09:40:51.319859 #14181]  INFO -- default-centos-7:   Verifying  : tcp_wrappers-libs-7.6-77.el7.x86_64                          4/9 
+I, [2018-06-28T09:40:51.329073 #14181]  INFO -- default-centos-7:   Verifying  : fipscheck-1.4.1-6.el7.x86_64                                 5/9 
+I, [2018-06-28T09:40:51.339184 #14181]  INFO -- default-centos-7:   Verifying  : which-2.20-7.el7.x86_64                                      6/9 
+I, [2018-06-28T09:40:51.348423 #14181]  INFO -- default-centos-7:   Verifying  : libedit-3.0-12.20121213cvs.el7.x86_64                        7/9 
+I, [2018-06-28T09:40:51.359708 #14181]  INFO -- default-centos-7:   Verifying  : openssh-clients-7.4p1-16.el7.x86_64                          8/9 
+I, [2018-06-28T09:40:51.395133 #14181]  INFO -- default-centos-7:   Verifying  : openssh-server-7.4p1-16.el7.x86_64                           9/9 
+I, [2018-06-28T09:40:51.395233 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:40:51.395259 #14181]  INFO -- default-centos-7: Installed:
+I, [2018-06-28T09:40:51.395280 #14181]  INFO -- default-centos-7:   openssh-clients.x86_64 0:7.4p1-16.el7   openssh-server.x86_64 0:7.4p1-16.el7  
+I, [2018-06-28T09:40:51.395626 #14181]  INFO -- default-centos-7:   sudo.x86_64 0:1.8.19p2-13.el7           which.x86_64 0:2.20-7.el7             
+I, [2018-06-28T09:40:51.395661 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:40:51.395682 #14181]  INFO -- default-centos-7: Dependency Installed:
+I, [2018-06-28T09:40:51.395704 #14181]  INFO -- default-centos-7:   fipscheck.x86_64 0:1.4.1-6.el7            fipscheck-lib.x86_64 0:1.4.1-6.el7  
+I, [2018-06-28T09:40:51.395724 #14181]  INFO -- default-centos-7:   libedit.x86_64 0:3.0-12.20121213cvs.el7   openssh.x86_64 0:7.4p1-16.el7       
+I, [2018-06-28T09:40:51.395741 #14181]  INFO -- default-centos-7:   tcp_wrappers-libs.x86_64 0:7.6-77.el7    
+I, [2018-06-28T09:40:51.395758 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:40:51.396686 #14181]  INFO -- default-centos-7: Complete!
+I, [2018-06-28T09:40:52.348025 #14181]  INFO -- default-centos-7: Removing intermediate container f43922d1bccd
+I, [2018-06-28T09:40:52.348448 #14181]  INFO -- default-centos-7:  ---> a10a3bacfcff
+I, [2018-06-28T09:40:52.349883 #14181]  INFO -- default-centos-7: Step 5/16 : RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
+I, [2018-06-28T09:40:52.366314 #14181]  INFO -- default-centos-7:  ---> Running in fbef84c88ba6
+I, [2018-06-28T09:40:52.718567 #14181]  INFO -- default-centos-7: Generating public/private rsa key pair.
+I, [2018-06-28T09:40:52.718662 #14181]  INFO -- default-centos-7: Your identification has been saved in /etc/ssh/ssh_host_rsa_key.
+I, [2018-06-28T09:40:52.718692 #14181]  INFO -- default-centos-7: Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub.
+I, [2018-06-28T09:40:52.718712 #14181]  INFO -- default-centos-7: The key fingerprint is:
+I, [2018-06-28T09:40:52.718731 #14181]  INFO -- default-centos-7: SHA256:ov5Q2IQM1dAZbOruJ+Iuh5AH9Mi9ih9vYuPn1W6DFqE root@fbef84c88ba6
+I, [2018-06-28T09:40:52.718751 #14181]  INFO -- default-centos-7: The key's randomart image is:
+I, [2018-06-28T09:40:52.718770 #14181]  INFO -- default-centos-7: +---[RSA 2048]----+
+I, [2018-06-28T09:40:52.718795 #14181]  INFO -- default-centos-7: |  ..o=.o         |
+I, [2018-06-28T09:40:52.718816 #14181]  INFO -- default-centos-7: | . o .*          |
+I, [2018-06-28T09:40:52.718835 #14181]  INFO -- default-centos-7: |o + oo.          |
+I, [2018-06-28T09:40:52.718852 #14181]  INFO -- default-centos-7: |.o o.+.          |
+I, [2018-06-28T09:40:52.718870 #14181]  INFO -- default-centos-7: | o .o.+.S        |
+I, [2018-06-28T09:40:52.718887 #14181]  INFO -- default-centos-7: |o ..Eo.o         |
+I, [2018-06-28T09:40:52.718903 #14181]  INFO -- default-centos-7: |ooo.o .o.        |
+I, [2018-06-28T09:40:52.718929 #14181]  INFO -- default-centos-7: |+.*+=o+.o        |
+I, [2018-06-28T09:40:52.718946 #14181]  INFO -- default-centos-7: | O=O==....       |
+I, [2018-06-28T09:40:52.718962 #14181]  INFO -- default-centos-7: +----[SHA256]-----+
+I, [2018-06-28T09:40:52.938585 #14181]  INFO -- default-centos-7: Removing intermediate container fbef84c88ba6
+I, [2018-06-28T09:40:52.938937 #14181]  INFO -- default-centos-7:  ---> ee8dbaf01e04
+I, [2018-06-28T09:40:52.939297 #14181]  INFO -- default-centos-7: Step 6/16 : RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ''
+I, [2018-06-28T09:40:52.955898 #14181]  INFO -- default-centos-7:  ---> Running in 5b65b82f5491
+I, [2018-06-28T09:40:53.332900 #14181]  INFO -- default-centos-7: Generating public/private dsa key pair.
+I, [2018-06-28T09:40:53.332984 #14181]  INFO -- default-centos-7: Your identification has been saved in /etc/ssh/ssh_host_dsa_key.
+I, [2018-06-28T09:40:53.333011 #14181]  INFO -- default-centos-7: Your public key has been saved in /etc/ssh/ssh_host_dsa_key.pub.
+I, [2018-06-28T09:40:53.333031 #14181]  INFO -- default-centos-7: The key fingerprint is:
+I, [2018-06-28T09:40:53.335218 #14181]  INFO -- default-centos-7: SHA256:o11AifSgoYrwGUGjFqXLbtpZ51zQHgs8auI3n68wEbQ root@5b65b82f5491
+I, [2018-06-28T09:40:53.335262 #14181]  INFO -- default-centos-7: The key's randomart image is:
+I, [2018-06-28T09:40:53.335282 #14181]  INFO -- default-centos-7: +---[DSA 1024]----+
+I, [2018-06-28T09:40:53.335298 #14181]  INFO -- default-centos-7: | o=.o.o...       |
+I, [2018-06-28T09:40:53.335324 #14181]  INFO -- default-centos-7: | .o= +.+.        |
+I, [2018-06-28T09:40:53.335339 #14181]  INFO -- default-centos-7: |ooo E   o        |
+I, [2018-06-28T09:40:53.335356 #14181]  INFO -- default-centos-7: |=o.o o . .       |
+I, [2018-06-28T09:40:53.335373 #14181]  INFO -- default-centos-7: |ooo . = S .      |
+I, [2018-06-28T09:40:53.335387 #14181]  INFO -- default-centos-7: |.    o B =       |
+I, [2018-06-28T09:40:53.335403 #14181]  INFO -- default-centos-7: | o. * o =        |
+I, [2018-06-28T09:40:53.335420 #14181]  INFO -- default-centos-7: |oo =o* o         |
+I, [2018-06-28T09:40:53.335438 #14181]  INFO -- default-centos-7: |. +. o*o.        |
+I, [2018-06-28T09:40:53.335453 #14181]  INFO -- default-centos-7: +----[SHA256]-----+
+I, [2018-06-28T09:40:53.570442 #14181]  INFO -- default-centos-7: Removing intermediate container 5b65b82f5491
+I, [2018-06-28T09:40:53.570846 #14181]  INFO -- default-centos-7:  ---> 868cc7f0ee8b
+I, [2018-06-28T09:40:53.571238 #14181]  INFO -- default-centos-7: Step 7/16 : RUN if ! getent passwd kitchen; then                 useradd -d /home/kitchen -m -s /bin/bash -p '*' kitchen;               fi
+I, [2018-06-28T09:40:53.588247 #14181]  INFO -- default-centos-7:  ---> Running in 2930dc85e2ab
+I, [2018-06-28T09:40:54.229424 #14181]  INFO -- default-centos-7: Removing intermediate container 2930dc85e2ab
+I, [2018-06-28T09:40:54.229854 #14181]  INFO -- default-centos-7:  ---> 632ea2c947f9
+I, [2018-06-28T09:40:54.230257 #14181]  INFO -- default-centos-7: Step 8/16 : RUN echo "kitchen ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+I, [2018-06-28T09:40:54.247544 #14181]  INFO -- default-centos-7:  ---> Running in 31f61b850db9
+I, [2018-06-28T09:40:54.747195 #14181]  INFO -- default-centos-7: Removing intermediate container 31f61b850db9
+I, [2018-06-28T09:40:54.749325 #14181]  INFO -- default-centos-7:  ---> b19f9984eb67
+I, [2018-06-28T09:40:54.749721 #14181]  INFO -- default-centos-7: Step 9/16 : RUN echo "Defaults !requiretty" >> /etc/sudoers
+I, [2018-06-28T09:40:54.766290 #14181]  INFO -- default-centos-7:  ---> Running in 9634a7af496d
+I, [2018-06-28T09:40:55.298944 #14181]  INFO -- default-centos-7: Removing intermediate container 9634a7af496d
+I, [2018-06-28T09:40:55.299358 #14181]  INFO -- default-centos-7:  ---> 94c61ceeacd9
+I, [2018-06-28T09:40:55.299742 #14181]  INFO -- default-centos-7: Step 10/16 : RUN mkdir -p /home/kitchen/.ssh
+I, [2018-06-28T09:40:55.316748 #14181]  INFO -- default-centos-7:  ---> Running in 47b23a98e401
+I, [2018-06-28T09:40:55.834504 #14181]  INFO -- default-centos-7: Removing intermediate container 47b23a98e401
+I, [2018-06-28T09:40:55.837037 #14181]  INFO -- default-centos-7:  ---> 09bb19f44c91
+I, [2018-06-28T09:40:55.837468 #14181]  INFO -- default-centos-7: Step 11/16 : RUN chown -R kitchen /home/kitchen/.ssh
+I, [2018-06-28T09:40:55.854717 #14181]  INFO -- default-centos-7:  ---> Running in 7eb8badf0c3e
+I, [2018-06-28T09:40:56.399713 #14181]  INFO -- default-centos-7: Removing intermediate container 7eb8badf0c3e
+I, [2018-06-28T09:40:56.400127 #14181]  INFO -- default-centos-7:  ---> b711d438c0c6
+I, [2018-06-28T09:40:56.400540 #14181]  INFO -- default-centos-7: Step 12/16 : RUN chmod 0700 /home/kitchen/.ssh
+I, [2018-06-28T09:40:56.417069 #14181]  INFO -- default-centos-7:  ---> Running in c849d1795849
+I, [2018-06-28T09:40:56.994114 #14181]  INFO -- default-centos-7: Removing intermediate container c849d1795849
+I, [2018-06-28T09:40:56.994516 #14181]  INFO -- default-centos-7:  ---> a624167454b1
+I, [2018-06-28T09:40:56.995034 #14181]  INFO -- default-centos-7: Step 13/16 : RUN touch /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:40:57.011866 #14181]  INFO -- default-centos-7:  ---> Running in ebd3e3d9fefc
+I, [2018-06-28T09:40:57.534327 #14181]  INFO -- default-centos-7: Removing intermediate container ebd3e3d9fefc
+I, [2018-06-28T09:40:57.534721 #14181]  INFO -- default-centos-7:  ---> 2bd61e5b4eaf
+I, [2018-06-28T09:40:57.535105 #14181]  INFO -- default-centos-7: Step 14/16 : RUN chown kitchen /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:40:57.553070 #14181]  INFO -- default-centos-7:  ---> Running in ca607bd98834
+I, [2018-06-28T09:40:58.090917 #14181]  INFO -- default-centos-7: Removing intermediate container ca607bd98834
+I, [2018-06-28T09:40:58.091321 #14181]  INFO -- default-centos-7:  ---> 64baf6904626
+I, [2018-06-28T09:40:58.091823 #14181]  INFO -- default-centos-7: Step 15/16 : RUN chmod 0600 /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:40:58.109183 #14181]  INFO -- default-centos-7:  ---> Running in 0758dd8f8b12
+I, [2018-06-28T09:40:58.612947 #14181]  INFO -- default-centos-7: Removing intermediate container 0758dd8f8b12
+I, [2018-06-28T09:40:58.613343 #14181]  INFO -- default-centos-7:  ---> 063ec12ea04e
+I, [2018-06-28T09:40:58.613752 #14181]  INFO -- default-centos-7: Step 16/16 : RUN echo ssh-rsa\ AAAAB3NzaC1yc2EAAAADAQABAAABAQC3TsJHx7UrL3w9JS80pXNssyk\+U48/HiwG9bJ6J5StzsyMbPTWgtr7FMNxjVUnYtGG447Kz15VFNEX4WEbGDrkOCZ/rlhOQ6Iisp3FVZQsnh3CHgsApe2MUL\+sj/ffi5/4djQOrmhNjnoOwwI7AmdkJR\+z8uati9B599/c5C8bXI8ZgXkHcahlC4/5OJr00/wKjpD1Dcd2bKT0uaZURfqlU2OQ8QMs2AZ7HVrJFwneQMpnA/koONrVZdngNnPq22gDzF6Ww/xpQYGGmL2Ip0aDvpcIagLlVLnbBUAcoDBheV6ICD7OfkWxPepr5hpjH\+mnE32Niz7iBEPqbds7z8IL\ kitchen_docker_key >> /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T09:40:58.630387 #14181]  INFO -- default-centos-7:  ---> Running in d8c85f3b05d8
+I, [2018-06-28T09:40:59.147446 #14181]  INFO -- default-centos-7: Removing intermediate container d8c85f3b05d8
+I, [2018-06-28T09:40:59.147872 #14181]  INFO -- default-centos-7:  ---> 5424aa6ca528
+I, [2018-06-28T09:40:59.149693 #14181]  INFO -- default-centos-7: Successfully built 5424aa6ca528
+I, [2018-06-28T09:40:59.307817 #14181]  INFO -- default-centos-7: 7bd48eced331a7ad96eaad5b6d82ea48a3d0c73799fcdbb6182614d8984e452c
+I, [2018-06-28T09:40:59.725097 #14181]  INFO -- default-centos-7: 0.0.0.0:32772
+I, [2018-06-28T09:40:59.881839 #14181]  INFO -- default-centos-7: [SSH] Established
+I, [2018-06-28T09:40:59.884559 #14181]  INFO -- default-centos-7: Finished creating <default-centos-7> (0m23.02s).
+I, [2018-06-28T09:40:59.885038 #14181]  INFO -- default-centos-7: -----> Converging <default-centos-7>...
+I, [2018-06-28T09:40:59.885714 #14181]  INFO -- default-centos-7: Preparing files for transfer
+I, [2018-06-28T09:40:59.885885 #14181]  INFO -- default-centos-7: Preparing dna.json
+I, [2018-06-28T09:40:59.886169 #14181]  INFO -- default-centos-7: Resolving cookbook dependencies with Berkshelf 7.0.2...
+I, [2018-06-28T09:41:02.542677 #14181]  INFO -- default-centos-7: Removing non-cookbook files before transfer
+I, [2018-06-28T09:41:02.546832 #14181]  INFO -- default-centos-7: Preparing validation.pem
+I, [2018-06-28T09:41:02.550791 #14181]  INFO -- default-centos-7: Preparing client.rb
+I, [2018-06-28T09:41:02.691317 #14181]  INFO -- default-centos-7: -----> Installing Chef Omnibus (install only if missing)
+I, [2018-06-28T09:41:02.695098 #14181]  INFO -- default-centos-7: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2018-06-28T09:41:02.695773 #14181]  INFO -- default-centos-7: Trying curl...
+I, [2018-06-28T09:41:02.921677 #14181]  INFO -- default-centos-7: Download complete.
+I, [2018-06-28T09:41:02.944274 #14181]  INFO -- default-centos-7: el 7 x86_64
+I, [2018-06-28T09:41:02.945095 #14181]  INFO -- default-centos-7: Getting information for chef stable  for el...
+I, [2018-06-28T09:41:02.945544 #14181]  INFO -- default-centos-7: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=7&m=x86_64
+I, [2018-06-28T09:41:02.945921 #14181]  INFO -- default-centos-7:   to file /tmp/install.sh.42/metadata.txt
+I, [2018-06-28T09:41:02.946994 #14181]  INFO -- default-centos-7: trying curl...
+I, [2018-06-28T09:41:03.099293 #14181]  INFO -- default-centos-7: sha1	bf0bd662c5b46d81418c943ac4bc6b84c095aa9c
+I, [2018-06-28T09:41:03.099368 #14181]  INFO -- default-centos-7: sha256	abdb676a8d55fc9807b4eabe5313c54d3946977d7ae3eecd7303cd388b04042a
+I, [2018-06-28T09:41:03.099391 #14181]  INFO -- default-centos-7: url	https://packages.chef.io/files/stable/chef/14.2.0/el/7/chef-14.2.0-1.el7.x86_64.rpm
+I, [2018-06-28T09:41:03.100001 #14181]  INFO -- default-centos-7: version	14.2.0
+I, [2018-06-28T09:41:03.102152 #14181]  INFO -- default-centos-7: downloaded metadata file looks valid...
+I, [2018-06-28T09:41:03.113243 #14181]  INFO -- default-centos-7: downloading https://packages.chef.io/files/stable/chef/14.2.0/el/7/chef-14.2.0-1.el7.x86_64.rpm
+I, [2018-06-28T09:41:03.113650 #14181]  INFO -- default-centos-7:   to file /tmp/install.sh.42/chef-14.2.0-1.el7.x86_64.rpm
+I, [2018-06-28T09:41:03.114535 #14181]  INFO -- default-centos-7: trying curl...
+I, [2018-06-28T09:41:04.448723 #14181]  INFO -- default-centos-7: Comparing checksum with sha256sum...
+I, [2018-06-28T09:41:04.604039 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:04.604548 #14181]  INFO -- default-centos-7: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-06-28T09:41:04.604940 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:04.605368 #14181]  INFO -- default-centos-7: You are installing an omnibus package without a version pin.  If you are installing
+I, [2018-06-28T09:41:04.605753 #14181]  INFO -- default-centos-7: on production servers via an automated process this is DANGEROUS and you will
+I, [2018-06-28T09:41:04.606178 #14181]  INFO -- default-centos-7: be upgraded without warning on new releases, even to new major releases.
+I, [2018-06-28T09:41:04.606593 #14181]  INFO -- default-centos-7: Letting the version float is only appropriate in desktop, test, development or
+I, [2018-06-28T09:41:04.607007 #14181]  INFO -- default-centos-7: CI/CD environments.
+I, [2018-06-28T09:41:04.607406 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:04.607792 #14181]  INFO -- default-centos-7: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-06-28T09:41:04.607891 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:04.608397 #14181]  INFO -- default-centos-7: Installing chef 
+I, [2018-06-28T09:41:04.608829 #14181]  INFO -- default-centos-7: installing with rpm...
+I, [2018-06-28T09:41:04.671285 #14181]  INFO -- default-centos-7: warning: /tmp/install.sh.42/chef-14.2.0-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2018-06-28T09:41:04.948540 #14181]  INFO -- default-centos-7: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2018-06-28T09:41:04.964802 #14181]  INFO -- default-centos-7: Updating / installing...
+I, [2018-06-28T09:41:10.085908 #14181]  INFO -- default-centos-7:    1:chef-14.2.0-1.el7                                                  (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2018-06-28T09:41:10.536133 #14181]  INFO -- default-centos-7: Thank you for installing Chef!
+I, [2018-06-28T09:41:10.637105 #14181]  INFO -- default-centos-7: Transferring files to <default-centos-7>
+I, [2018-06-28T09:41:15.710380 #14181]  INFO -- default-centos-7: Starting Chef Client, version 14.2.0
+I, [2018-06-28T09:41:16.179753 #14181]  INFO -- default-centos-7: [2018-06-28T09:41:16+00:00] WARN: Plugin Network: unable to detect ipaddress
+I, [2018-06-28T09:41:16.833243 #14181]  INFO -- default-centos-7: Creating a new client identity for default-centos-7 using the validator key.
+I, [2018-06-28T09:41:17.172862 #14181]  INFO -- default-centos-7: resolving cookbooks for run list: ["apache::default"]
+I, [2018-06-28T09:41:17.331977 #14181]  INFO -- default-centos-7: Synchronizing Cookbooks:
+I, [2018-06-28T09:41:17.378497 #14181]  INFO -- default-centos-7:   - apache (0.1.5)
+I, [2018-06-28T09:41:17.407464 #14181]  INFO -- default-centos-7:   - php (6.0.0)
+I, [2018-06-28T09:41:17.419742 #14181]  INFO -- default-centos-7:   - build-essential (8.1.1)
+I, [2018-06-28T09:41:17.437070 #14181]  INFO -- default-centos-7:   - yum-epel (3.1.0)
+I, [2018-06-28T09:41:17.441722 #14181]  INFO -- default-centos-7:   - seven_zip (3.0.0)
+I, [2018-06-28T09:41:17.465118 #14181]  INFO -- default-centos-7:   - mingw (2.0.2)
+I, [2018-06-28T09:41:17.474578 #14181]  INFO -- default-centos-7:   - windows (4.3.2)
+I, [2018-06-28T09:41:17.475497 #14181]  INFO -- default-centos-7: Installing Cookbook Gems:
+I, [2018-06-28T09:41:17.496468 #14181]  INFO -- default-centos-7: Compiling Cookbooks...
+I, [2018-06-28T09:41:17.573875 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:17.574613 #14181]  INFO -- default-centos-7: ================================================================================
+I, [2018-06-28T09:41:17.575279 #14181]  INFO -- default-centos-7: Recipe Compile Error in /tmp/kitchen/cache/cookbooks/apache/recipes/default.rb
+I, [2018-06-28T09:41:17.575938 #14181]  INFO -- default-centos-7: ================================================================================
+I, [2018-06-28T09:41:17.576315 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:17.576992 #14181]  INFO -- default-centos-7: TypeError
+I, [2018-06-28T09:41:17.577576 #14181]  INFO -- default-centos-7: ---------
+I, [2018-06-28T09:41:17.578260 #14181]  INFO -- default-centos-7: no implicit conversion of nil into String
+I, [2018-06-28T09:41:17.578633 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:17.579237 #14181]  INFO -- default-centos-7: Cookbook Trace:
+I, [2018-06-28T09:41:17.579862 #14181]  INFO -- default-centos-7: ---------------
+I, [2018-06-28T09:41:17.580292 #14181]  INFO -- default-centos-7:   /tmp/kitchen/cache/cookbooks/apache/recipes/default.rb:35:in `block in from_file'
+I, [2018-06-28T09:41:17.580775 #14181]  INFO -- default-centos-7:   /tmp/kitchen/cache/cookbooks/apache/recipes/default.rb:22:in `each'
+I, [2018-06-28T09:41:17.581646 #14181]  INFO -- default-centos-7:   /tmp/kitchen/cache/cookbooks/apache/recipes/default.rb:22:in `from_file'
+I, [2018-06-28T09:41:17.581923 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:17.582943 #14181]  INFO -- default-centos-7: Relevant File Content:
+I, [2018-06-28T09:41:17.583507 #14181]  INFO -- default-centos-7: ----------------------
+I, [2018-06-28T09:41:17.583983 #14181]  INFO -- default-centos-7: /tmp/kitchen/cache/cookbooks/apache/recipes/default.rb:
+I, [2018-06-28T09:41:17.584427 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:17.584878 #14181]  INFO -- default-centos-7:  28:  
+I, [2018-06-28T09:41:17.585422 #14181]  INFO -- default-centos-7:  29:  if node["platform"] == "ubuntu"
+I, [2018-06-28T09:41:17.585911 #14181]  INFO -- default-centos-7:  30:  	template_location = "/etc/apache2/sites-enabled/#{sitename}.conf"
+I, [2018-06-28T09:41:17.586364 #14181]  INFO -- default-centos-7:  31:  elsif node["platform"] == "amazon"
+I, [2018-06-28T09:41:17.586990 #14181]  INFO -- default-centos-7:  32:  	template_location = "/etc/httpd/conf.d/#{sitename}.conf"
+I, [2018-06-28T09:41:17.587262 #14181]  INFO -- default-centos-7:  33:  end
+I, [2018-06-28T09:41:17.587626 #14181]  INFO -- default-centos-7:  34:  
+I, [2018-06-28T09:41:17.587983 #14181]  INFO -- default-centos-7:  35>> 	template template_location do
+I, [2018-06-28T09:41:17.588322 #14181]  INFO -- default-centos-7:  36:  		source "vhost.erb"
+I, [2018-06-28T09:41:17.588745 #14181]  INFO -- default-centos-7:  37:  		mode "0644"
+I, [2018-06-28T09:41:17.589155 #14181]  INFO -- default-centos-7:  38:  		variables(
+I, [2018-06-28T09:41:17.589635 #14181]  INFO -- default-centos-7:  39:  			:document_root => document_root,
+I, [2018-06-28T09:41:17.589849 #14181]  INFO -- default-centos-7:  40:  			:port => data["port"],
+I, [2018-06-28T09:41:17.590357 #14181]  INFO -- default-centos-7:  41:  			:domain => data ["domain"]
+I, [2018-06-28T09:41:17.590616 #14181]  INFO -- default-centos-7:  42:  		)
+I, [2018-06-28T09:41:17.593003 #14181]  INFO -- default-centos-7:  43:  		notifies :restart, "service[httpd]"
+I, [2018-06-28T09:41:17.593176 #14181]  INFO -- default-centos-7:  44:  	end
+I, [2018-06-28T09:41:17.593321 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:17.593524 #14181]  INFO -- default-centos-7: System Info:
+I, [2018-06-28T09:41:17.593707 #14181]  INFO -- default-centos-7: ------------
+I, [2018-06-28T09:41:17.593849 #14181]  INFO -- default-centos-7: chef_version=14.2.0
+I, [2018-06-28T09:41:17.593989 #14181]  INFO -- default-centos-7: platform=centos
+I, [2018-06-28T09:41:17.594130 #14181]  INFO -- default-centos-7: platform_version=7.5.1804
+I, [2018-06-28T09:41:17.594352 #14181]  INFO -- default-centos-7: ruby=ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux]
+I, [2018-06-28T09:41:17.594512 #14181]  INFO -- default-centos-7: program_name=/opt/chef/bin/chef-client
+I, [2018-06-28T09:41:17.594693 #14181]  INFO -- default-centos-7: executable=/opt/chef/bin/chef-client
+I, [2018-06-28T09:41:17.594832 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:17.594982 #14181]  INFO -- default-centos-7: 
+I, [2018-06-28T09:41:17.595189 #14181]  INFO -- default-centos-7: Running handlers:
+I, [2018-06-28T09:41:17.595333 #14181]  INFO -- default-centos-7: [2018-06-28T09:41:17+00:00] ERROR: Running exception handlers
+I, [2018-06-28T09:41:17.596935 #14181]  INFO -- default-centos-7: Running handlers complete
+I, [2018-06-28T09:41:17.597127 #14181]  INFO -- default-centos-7: [2018-06-28T09:41:17+00:00] ERROR: Exception handlers complete
+I, [2018-06-28T09:41:17.597318 #14181]  INFO -- default-centos-7: Chef Client failed. 0 resources updated in 01 seconds
+I, [2018-06-28T09:41:17.597486 #14181]  INFO -- default-centos-7: [2018-06-28T09:41:17+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2018-06-28T09:41:17.597672 #14181]  INFO -- default-centos-7: [2018-06-28T09:41:17+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2018-06-28T09:41:17.597833 #14181]  INFO -- default-centos-7: [2018-06-28T09:41:17+00:00] FATAL: TypeError: no implicit conversion of nil into String
+E, [2018-06-28T09:41:17.616819 #14181] ERROR -- default-centos-7: Converge failed on instance <default-centos-7>.
+E, [2018-06-28T09:41:17.617073 #14181] ERROR -- default-centos-7: ------Exception-------
+E, [2018-06-28T09:41:17.617102 #14181] ERROR -- default-centos-7: Class: Kitchen::ActionFailed
+E, [2018-06-28T09:41:17.617116 #14181] ERROR -- default-centos-7: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2018-06-28T09:41:17.617133 #14181] ERROR -- default-centos-7: ----------------------
+E, [2018-06-28T09:41:17.617145 #14181] ERROR -- default-centos-7: ------Backtrace-------
+E, [2018-06-28T09:41:17.617157 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/provisioner/base.rb:91:in `rescue in call'
+E, [2018-06-28T09:41:17.617169 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/provisioner/base.rb:67:in `call'
+E, [2018-06-28T09:41:17.617182 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:393:in `block in converge_action'
+E, [2018-06-28T09:41:17.617194 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:536:in `synchronize_or_call'
+E, [2018-06-28T09:41:17.617207 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:498:in `block in action'
+E, [2018-06-28T09:41:17.617218 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-06-28T09:41:17.617230 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:497:in `action'
+E, [2018-06-28T09:41:17.617241 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:389:in `converge_action'
+E, [2018-06-28T09:41:17.617254 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:368:in `block in transition_to'
+E, [2018-06-28T09:41:17.617266 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `each'
+E, [2018-06-28T09:41:17.617277 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `transition_to'
+E, [2018-06-28T09:41:17.617289 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:135:in `converge'
+E, [2018-06-28T09:41:17.617301 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-06-28T09:41:17.617313 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-06-28T09:41:17.617324 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-06-28T09:41:17.617336 #14181] ERROR -- default-centos-7: ----End Backtrace-----
+E, [2018-06-28T09:41:17.617347 #14181] ERROR -- default-centos-7: ---Nested Exception---
+E, [2018-06-28T09:41:17.617358 #14181] ERROR -- default-centos-7: Class: Kitchen::Transport::SshFailed
+E, [2018-06-28T09:41:17.617377 #14181] ERROR -- default-centos-7: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2018-06-28T09:41:17.617390 #14181] ERROR -- default-centos-7: ----------------------
+E, [2018-06-28T09:41:17.617401 #14181] ERROR -- default-centos-7: ------Backtrace-------
+E, [2018-06-28T09:41:17.617412 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/provisioner/base.rb:91:in `rescue in call'
+E, [2018-06-28T09:41:17.617424 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/provisioner/base.rb:67:in `call'
+E, [2018-06-28T09:41:17.617436 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:393:in `block in converge_action'
+E, [2018-06-28T09:41:17.617448 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:536:in `synchronize_or_call'
+E, [2018-06-28T09:41:17.617459 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:498:in `block in action'
+E, [2018-06-28T09:41:17.617471 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-06-28T09:41:17.617483 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:497:in `action'
+E, [2018-06-28T09:41:17.617495 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:389:in `converge_action'
+E, [2018-06-28T09:41:17.617506 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:368:in `block in transition_to'
+E, [2018-06-28T09:41:17.617518 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `each'
+E, [2018-06-28T09:41:17.617530 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `transition_to'
+E, [2018-06-28T09:41:17.617541 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:135:in `converge'
+E, [2018-06-28T09:41:17.617553 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-06-28T09:41:17.617565 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-06-28T09:41:17.617577 #14181] ERROR -- default-centos-7: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-06-28T09:41:17.617611 #14181] ERROR -- default-centos-7: ----End Backtrace-----

@@ -1,0 +1,27 @@
+I, [2018-06-28T09:47:05.400055 #25406]  INFO -- default-amazon: -----> Creating <default-amazon>...
+E, [2018-06-28T09:47:05.400275 #25406] ERROR -- default-amazon: Create failed on instance <default-amazon>.
+E, [2018-06-28T09:47:05.400354 #25406] ERROR -- default-amazon: ------Exception-------
+E, [2018-06-28T09:47:05.400375 #25406] ERROR -- default-amazon: Class: Kitchen::ActionFailed
+E, [2018-06-28T09:47:05.400389 #25406] ERROR -- default-amazon: Message: Unknown platform 'amazon'
+E, [2018-06-28T09:47:05.400400 #25406] ERROR -- default-amazon: ----------------------
+E, [2018-06-28T09:47:05.400411 #25406] ERROR -- default-amazon: ------Backtrace-------
+E, [2018-06-28T09:47:05.400422 #25406] ERROR -- default-amazon: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:249:in `build_dockerfile'
+E, [2018-06-28T09:47:05.400434 #25406] ERROR -- default-amazon: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:285:in `dockerfile'
+E, [2018-06-28T09:47:05.400445 #25406] ERROR -- default-amazon: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:304:in `build_image'
+E, [2018-06-28T09:47:05.400462 #25406] ERROR -- default-amazon: /root/.chefdk/gem/ruby/2.5.0/gems/kitchen-docker-2.6.0/lib/kitchen/driver/docker.rb:122:in `create'
+E, [2018-06-28T09:47:05.400474 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `public_send'
+E, [2018-06-28T09:47:05.400486 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `block in perform_action'
+E, [2018-06-28T09:47:05.400496 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:536:in `synchronize_or_call'
+E, [2018-06-28T09:47:05.400508 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:498:in `block in action'
+E, [2018-06-28T09:47:05.400519 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-06-28T09:47:05.400530 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:497:in `action'
+E, [2018-06-28T09:47:05.400541 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:469:in `perform_action'
+E, [2018-06-28T09:47:05.400552 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:379:in `create_action'
+E, [2018-06-28T09:47:05.400563 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:368:in `block in transition_to'
+E, [2018-06-28T09:47:05.400574 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `each'
+E, [2018-06-28T09:47:05.400585 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:367:in `transition_to'
+E, [2018-06-28T09:47:05.400596 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/instance.rb:135:in `converge'
+E, [2018-06-28T09:47:05.400607 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-06-28T09:47:05.400618 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-06-28T09:47:05.400629 #25406] ERROR -- default-amazon: /opt/chefdk/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.21.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-06-28T09:47:05.400644 #25406] ERROR -- default-amazon: ----End Backtrace-----
